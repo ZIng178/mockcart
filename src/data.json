@@ -1,0 +1,44 @@
+{
+    "products":[
+        {
+            "_id":"dress1",
+            "title": "Dress 1",
+            "image":"/images/dress1.jpg",
+            "description": "beautiful dress",
+            "price" :19,
+            "availableSizes":["XL", "L", "M", "S", "XS"]
+        },
+
+        {
+            "_id":"dress2",
+            "title": "Dress 2",
+            "image":"/images/dress2.jpg",
+            "description": "beautiful dress",
+            "price" :19,
+            "availableSizes":["XL", "L", "M"]
+        },
+
+        {
+            "_id":"dress3",
+            "title": "Dress 3",
+            "image":"/images/dress3.jpg",
+            "description": "beautiful dress",
+            "price" :39,
+            "availableSizes":["XL", "L", "M", "S", "XS"]
+        },
+
+        {
+            "_id":"dress4",
+            "title": "Dress 4",
+            "image":"/images/dress4.jpg",
+            "description": "beautiful dress",
+            "price" :29,
+            "availableSizes":[ "M", "S", "XS"]
+        }
+
+
+
+    ]
+        
+     
+}
