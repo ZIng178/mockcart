@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.products li {
+  flex: 1 1 29rem;
+  height: 47rem;
+  padding: 1rem;
+  margin: rem;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.product img {
+  max-width: 37rem;
+  max-height: 37rem;
+}
+
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productprice div,
+.productprice button {
+  text-align: center;
+  flex: 1;
+}
+
+.productprice div {
+  font-size: 2rem;
+}
+
+.button-primary {
+  background: #ffc000;
+  padding: 2rem;
+  border: 0.1rem #c0c0c0 solid;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  border: 0.1rem #838383 solid;
+  background-color: #f0f0f0;
+}
