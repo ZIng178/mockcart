@@ -1,7 +1,7 @@
 import React from "react";
 import "./products.css";
 
-const Products = ({ products }) => {
+const Products = ({ products, addToCart }) => {
   console.log("products", products);
   return (
     <>
@@ -16,7 +16,13 @@ const Products = ({ products }) => {
                 </a>
                 <div className="productprice">
                   <div>${product.price}</div>
-                  <button className="button-primary"> Add to cart</button>
+                  <button
+                    onClick={() => addToCart(product)}
+                    className="button-primary"
+                  >
+                    {" "}
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </li>
