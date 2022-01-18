@@ -10,14 +10,27 @@ function App() {
   const [productState, setProductState] = useState(data.products);
   const [size, setSize] = useState("");
   const [sort, setSort] = useState("");
-  const [cartElements, setCartElements] = useState([]);
+  const [cartElements, setCartElements] = useState(
+    JSON.parse(localStorage.getItem("cartItems"))
+  );
 
   console.log(cartElements);
+
+  const createOrders = (order) => {
+    console.log("this is the order", order);
+    alert(" You have to save this" + order.name);
+  };
 
   const removeFromCart = (productState) => {
     const cartItems = cartElements.slice();
 
     setCartElements(cartItems.filter((item) => item._id !== productState._id));
+    localStorage.setItem(
+      "cartItems",
+      JSON.stringify(
+        cartElements.filter((item) => item._id !== productState._id)
+      )
+    );
   };
 
   const addToCart = (productState) => {
@@ -34,6 +47,8 @@ function App() {
       cartItems.push({ ...productState, count: 1 });
     }
     setCartElements(cartItems);
+    console.log(cartItems);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   };
 
   const filterProducts = (event) => {
@@ -95,6 +110,7 @@ function App() {
               cartElements={cartElements}
               m
               removeFromCart={removeFromCart}
+              createOrders={createOrders}
             />
           </div>
         </div>
