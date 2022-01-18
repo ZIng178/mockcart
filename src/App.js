@@ -18,7 +18,7 @@ function App() {
 
   const createOrders = (order) => {
     console.log("this is the order", order);
-    alert(" You have to save this" + order.name);
+    alert(" You have to save this" + " " + order.name);
   };
 
   const removeFromCart = (productState) => {
