@@ -7,7 +7,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb://localhost:5000/react-shopping-cart-db", {
+mongoose.connect("mongodb://localhost/react-shopping-cart-db", {
   useNewUrlParser: true,
 
   useUnifiedTopology: true,
@@ -41,7 +41,7 @@ app.delete("/api/products/:id", async (req, res) => {
   res.send(deletedProduct);
 });
 
-const port = process.env.PORT || 5000;
+const port = 5000;
 app.listen(port, () => {
   console.log(`server is running at ${port}`);
 });
