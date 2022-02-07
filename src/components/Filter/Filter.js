@@ -1,31 +1,67 @@
-import React from "react";
+import { connect } from "react-redux";
+import React, { useState } from "react";
 import "./filter.css";
+import { filterProducts, sortProducts } from "../../actions/productActions";
 
-const Filter = ({ count, size, sortProducts, filterProducts }) => {
-  console.log("filterProducts", filterProducts);
+const Filter = ({
+  count,
+  sortProducts,
+  filterProducts,
+  products,
+  size,
+  sort,
+  filteredProducts,
+}) => {
+  // const [size, setSize] = useState([""]);
+
+  // const handleSize = (e) => {
+  //   setSize(e.target.value);
+  // };
+
+  console.log("size", size);
   return (
     <div className="filter">
       <div className="filter-result">{count} Products</div>
+
       <div className="filter-sort">
         Order{" "}
-        <select value={size} onChange={sortProducts}>
-          <option> Latest</option>
+        <select
+          value={sort}
+          onChange={(e) => sortProducts(filteredProducts, e.target.value)}
+        >
+          <option value="latest"> Latest</option>
           <option value="lowest"> Lowest</option>
           <option value="highest"> Highest</option>
         </select>
       </div>
       <div className="filter-size">Filter</div>
-      <select value={size} onChange={filterProducts}>
-        <option value="">ALL</option>
-        <option value="XS">XS</option>
-        <option value="S">S</option>
-        <option value="M">M</option>
-        <option value="L">L</option>
-        <option value="XL">XL</option>
-        <option value="XXL">XXL</option>
+      <select
+        value={size}
+        onChange={(e) => filterProducts(products, e.target.value)}
+      >
+        <option value="">Sizes</option>
+        <option value="8">8</option>
+        <option value="8.5">8.5</option>
+        <option value="9">9</option>
+        <option value="9.5">9.5</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="12.5">12.5</option>
       </select>
     </div>
   );
 };
 
-export default Filter;
+export default connect(
+  (state) => ({
+    size: state.products.size,
+    sort: state.products.sort,
+    products: state.products.items,
+    filteredProducts: state.products.filteredItems,
+  }),
+  {
+    filterProducts,
+    sortProducts,
+  }
+)(Filter);
