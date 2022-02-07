@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./cart.css";
 import { Fade } from "react-awesome-reveal";
+import { connect } from "react-redux";
+import { removeFromCart } from "../../actions/cartActions";
 
-const Cart = ({ cartElements, removeFromCart, createOrders }) => {
+const Cart = ({ removeFromCart, cartItems }) => {
   const [showCheckOut, setShowCheckOut] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -29,9 +31,9 @@ const Cart = ({ cartElements, removeFromCart, createOrders }) => {
       name: name,
       email: email,
       address: address,
-      cartElements: cartElements,
+      cartItems: cartItems,
     };
-    createOrders(order);
+    createOrder(order);
 
     console.log("order", order);
   };
@@ -40,20 +42,20 @@ const Cart = ({ cartElements, removeFromCart, createOrders }) => {
     <>
       <Fade left cascade>
         <div>
-          {/* {console.log("cardElements", cartElements)} */}
+          {/* {console.log("cardItems", cartItems)} */}
 
-          {cartElements.length === 0 ? (
+          {cartItems.length === 0 ? (
             <div className="cart cart-header"> Cart is empty </div>
           ) : (
             <div className="cart cart-header">
               {" "}
-              You have {cartElements.length} items in the cart{" "}
+              You have {cartItems.length} items in the cart{" "}
             </div>
           )}
           <div>
-            <div className="cart" key={cartElements._id}>
+            <div className="cart" key={cartItems._id}>
               <ul className="cart-items">
-                {cartElements.map((item) => (
+                {cartItems.map((item) => (
                   <li key={item._id}>
                     <div>
                       <img src={item.image} alt={item.title} />
@@ -69,13 +71,13 @@ const Cart = ({ cartElements, removeFromCart, createOrders }) => {
                 ))}
               </ul>
             </div>
-            {cartElements.length !== 0 && (
+            {cartItems.length !== 0 && (
               <div>
                 <div className="cart">
                   <div className="total">
                     <div>
                       Total : $
-                      {cartElements.reduce(
+                      {cartItems.reduce(
                         (acc, curr) => acc + curr.price * curr.count,
                         0
                       )}
@@ -91,7 +93,7 @@ const Cart = ({ cartElements, removeFromCart, createOrders }) => {
 
                   {showCheckOut && (
                     <Fade left>
-                      <div key={cartElements._id}>
+                      <div key={cartItems._id}>
                         <ul className="form-container">
                           <form>
                             <li>
@@ -146,4 +148,9 @@ const Cart = ({ cartElements, removeFromCart, createOrders }) => {
   );
 };
 
-export default Cart;
+export default connect(
+  (state) => ({
+    cartItems: state.cart.cartItems,
+  }),
+  { removeFromCart }
+)(Cart);
