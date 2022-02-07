@@ -41,8 +41,7 @@ app.delete("/api/products/:id", async (req, res) => {
   res.send(deletedProduct);
 });
 
-const port = 5;
-000;
+const port = 5000;
 app.listen(port, () => {
   console.log(`server is running at ${port}`);
 });
