@@ -4,6 +4,7 @@ import { Fade, Zoom } from "react-awesome-reveal";
 import Modal from "react-modal";
 import { connect } from "react-redux";
 import { fetchProducts } from "../../actions/productActions";
+import { addToCart } from "../../actions/cartActions";
 
 const Products = ({ fetchProducts, products, addToCart }) => {
   const [modalState, setModalState] = useState({ product: null });
@@ -111,5 +112,6 @@ export default connect(
   (state) => ({ products: state.products.filteredItems }),
   {
     fetchProducts,
+    addToCart,
   }
 )(Products);
