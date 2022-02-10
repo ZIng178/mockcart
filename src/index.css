@@ -9,7 +9,7 @@ select,
 button,
 textarea {
   font-size: 1.6rem;
-  font-family: Montserrat, Helvetica, sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 body,
 #root {
@@ -26,21 +26,23 @@ body,
 }
 
 a:hover {
-  color: #ff8000;
+  color: rgb(217, 26, 33);
 }
 
 header {
   grid-area: header;
-  background-color: #203040;
+  background-color: black;
   color: white;
   display: flex;
   padding: 0.5rem;
   align-items: center;
+  justify-content: center;
 }
 
 header a {
   color: white;
   text-decoration: none;
+  font-size: xx-large;
 }
 
 main {
@@ -49,7 +51,7 @@ main {
 
 footer {
   grid-area: footer;
-  background-color: #203040;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;

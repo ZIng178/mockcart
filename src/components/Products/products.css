@@ -45,7 +45,8 @@
 }
 
 .button-primary {
-  background: #ffc000;
+  background: rgb(217, 26, 33);
+  color: white;
   padding: 2rem;
   border: 0.1rem #c0c0c0 solid;
   cursor: pointer;
@@ -53,7 +54,7 @@
 
 .button-primary:hover {
   border: 0.1rem #838383 solid;
-  background-color: #f0f0f0;
+  background-color: black;
 }
 
 /* Product Details */
@@ -74,4 +75,13 @@
 .product-details-description {
   flex: 1 1;
   margin: 1rem;
+}
+
+@media (min-width: 400px) {
+  .productprice div,
+  .productprice button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

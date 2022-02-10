@@ -25,7 +25,7 @@ const Products = ({ fetchProducts, products, addToCart }) => {
 
   useEffect(() => {
     fetchProducts();
-  }, [fetchProducts]);
+  }, []);
 
   console.log("productt", productState);
 

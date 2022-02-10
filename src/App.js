@@ -13,7 +13,7 @@ function App() {
       <Provider store={store}>
         <div className="grid-container">
           <header>
-            <a href="/"> React Shopping Cart </a>
+            <a href="/"> KICKSKART </a>
           </header>
           <main>
             <div className="content">

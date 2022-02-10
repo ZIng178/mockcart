@@ -65,3 +65,22 @@ input {
   padding: 1rem;
   border: 0.1rem #c0c0c0 solid;
 }
+
+.remove-button {
+  background: rgb(217, 26, 33);
+  color: white;
+  padding: 0.3rem;
+  border: 0.1rem #c0c0c0 solid;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  border: 0.1rem #838383 solid;
+  background-color: black;
+}
+
+.order-class {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
