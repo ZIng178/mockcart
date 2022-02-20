@@ -5,7 +5,12 @@ import {
 } from "../type";
 
 export const fetchProducts = () => async (dispatch) => {
-  const res = await fetch("/api/products");
+  const res = await fetch("/api/products", {
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+  });
   const data = await res.json();
   console.log("DATA", data);
   dispatch({
