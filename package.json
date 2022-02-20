@@ -23,8 +23,8 @@
   "scripts": {
     "server": "nodemon server.js",
     "start": "react-scripts start",
-    "build": "react-scripts build && sudo npm run build",
-    "heroku-postbuild": " sudo npm run build",
+    "build": "react-scripts build ",
+    
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
