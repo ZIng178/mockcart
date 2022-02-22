@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors);
 
 mongoose.connect(
-  process.env.MONGODB_URL || "https://kickskart.herokuapp.com/",
+  process.env.MONGODB_URL || "mongodb://localhost/react-shopping-cart-db",
   {
     useNewUrlParser: true,
 
