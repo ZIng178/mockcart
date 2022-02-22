@@ -9,11 +9,14 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors);
 
-mongoose.connect("mongodb://localhost/react-shopping-cart-db", {
-  useNewUrlParser: true,
+mongoose.connect(
+  process.env.MONGODB_URL || "mongodb://localhost/react-shopping-cart-db",
+  {
+    useNewUrlParser: true,
 
-  useUnifiedTopology: true,
-});
+    useUnifiedTopology: true,
+  }
+);
 
 const Product = mongoose.model(
   "products",
