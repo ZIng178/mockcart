@@ -5,7 +5,7 @@ import {
 } from "../type";
 
 export const fetchProducts = () => async (dispatch) => {
-  const res = await fetch("http://kickskart.heroku.app/api/products");
+  const res = await fetch("http://localhost:5000/api/products");
   const data = await res.json();
   console.log(data);
   dispatch({
