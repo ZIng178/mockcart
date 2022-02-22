@@ -24,7 +24,7 @@
   },
   "scripts": {
     "server": "nodemon server.js --ignore client",
-    "start": "node server.js",
+    "start": "react-scripts start",
   
     "build": "react-scripts build ",
     "heroku-postbuild": " npm install && npm run build",
