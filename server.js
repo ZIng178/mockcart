@@ -82,7 +82,7 @@ app.post("/api/orders", async (req, res) => {
   res.send(order);
 });
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`server is running at ${port}`);
 });
