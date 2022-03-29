@@ -26,8 +26,6 @@ const Products = ({ fetchProducts, products, addToCart }) => {
     fetchProducts();
   }, []);
 
-  console.log("productt", productState);
-
   return (
     <>
       <div>
