@@ -6,6 +6,13 @@ import { connect } from "react-redux";
 import { fetchProducts } from "../../actions/productActions";
 import { addToCart } from "../../actions/cartActions";
 
+const customStyles = {
+  content: {
+    background: "black",
+    color: "red",
+  },
+};
+
 const Products = ({ fetchProducts, products, addToCart }) => {
   const [modalState, setModalState] = useState({ product: null });
   const [productState, setProductState] = useState({ products });
@@ -64,14 +71,16 @@ const Products = ({ fetchProducts, products, addToCart }) => {
           )}
         </Fade>
         {product && (
-          <Modal isOpen={true} onRequestClose={closeModal}>
+          <Modal isOpen={true} onRequestClose={closeModal} style={customStyles}>
             <Zoom>
               <button className="close-modal" onClick={closeModal}>
                 x
               </button>
 
               <div className="product-details">
-                <img src={product.image} alt={product.title}></img>
+                <img src={product.image} alt={product.title}>
+                  {product.image}
+                </img>
                 <div className="product-details-description">
                   <p>
                     <strong> {product.title} </strong>

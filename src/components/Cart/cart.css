@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@900&display=swap");
+
 .cart-header {
   border-bottom: 0.1rem #c0c0c0 solid;
 }
@@ -79,8 +81,17 @@ input {
   background-color: black;
 }
 
-.order-class {
+.order-details {
   display: flex;
   flex-direction: column;
   margin-left: 5%;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.order-class li {
+  justify-content: space-around;
+}
+
+.thank-you {
+  font-family: "Lexend Deca", sans-serif;
 }

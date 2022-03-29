@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import React, { useState } from "react";
 import "./filter.css";
 import { filterProducts, sortProducts } from "../../actions/productActions";
+import data from "../../data.json";
 
 const Filter = ({
   count,
@@ -19,6 +20,7 @@ const Filter = ({
   // };
 
   console.log("size", size);
+  console.log("datajson", data.products);
   return (
     <div className="filter">
       <div className="filter-result">{count} Products</div>

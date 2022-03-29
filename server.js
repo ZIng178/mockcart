@@ -10,11 +10,14 @@ app.use(bodyParser.json());
 app.use(cors);
 app.use("/", express.static(__dirname + "/build"));
 
-mongoose.connect("mongodb://localhost/react-shopping-cart-db", {
-  useNewUrlParser: true,
+mongoose.connect(
+  process.env.MONGODB_URL || "mongodb://localhost/react-shopping-cart-db",
+  {
+    useNewUrlParser: true,
 
-  useUnifiedTopology: true,
-});
+    useUnifiedTopology: true,
+  }
+);
 
 const Product = mongoose.model(
   "products",
@@ -83,7 +86,7 @@ app.post("/api/orders", async (req, res) => {
   res.send(order);
 });
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`server is running at ${port}`);
 });

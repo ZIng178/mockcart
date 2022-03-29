@@ -1,39 +1,56 @@
 {
     "products":[
         {
-            "_id":"dress1",
-            "title": "Dress 1",
-            "image":"/images/dress1.jpg",
-            "description": "beautiful dress",
-            "price" :19,
-            "availableSizes":["XL", "L", "M", "S", "XS"]
+            "_id":"shoe1",
+            "title": "DUNK LOW 'BLACK WHITE'",
+            "image":"/images/shoe1.jpg",
+            "description": "The Dunk Low 'Black White' brings a classic two-tone look to its classic basketball construction. The shoe's low-top build emerges in leather, with a white base contrasted by black overlays, with further black on the Swoosh branding. Perforations on the toe box provide breathability, while underfoot, the two-tone look is matched by the tooling, which incorporates a concentric rubber outsole for traction.",
+            "price" :214,
+            "availableSizes":["12", "8", "8.5", "9.5", "10", "10.5"]
         },
 
         {
-            "_id":"dress2",
-            "title": "Dress 2",
-            "image":"/images/dress2.jpg",
-            "description": "beautiful dress",
-            "price" :19,
-            "availableSizes":["XL", "L", "M"]
+            "_id":"shoe2",
+            "title": "AIR JORDAN 1 RETRO HIGH OG 'PATENT BRED'",
+            "image":"/images/shoe2.jpg",
+            "description": "Featuring a classic mix of hues, the Air Jordan 1 Retro High OG 'Patent Bred' also sports an elevated construction. Built entirely with patent leather, the shoe's upper appears in a familiar mix of black and Varsity Red, with perforations on the toe box offering breathability. Underfoot, a white Air midsole provides cushioning and contrast, giving way to a Varsity Red finish on the concentric rubber outsole, which is included for traction.",
+            "price" :190,
+            "availableSizes":["12","11", "8.5", "9.5", "10", "10.5"]
         },
 
         {
-            "_id":"dress3",
-            "title": "Dress 3",
-            "image":"/images/dress3.jpg",
-            "description": "beautiful dress",
-            "price" :39,
-            "availableSizes":["XL", "L", "M", "S", "XS"]
+            "_id":"shoe3",
+            "title": "AIR JORDAN 11 RETRO 'COOL GREY' 2021",
+            "image":"/images/shoe3.jpg",
+            "description": "Released in December 2021, the Air Jordan 11 Retro 'Cool Grey' 2021 brings back a colorway from 2001 and 2010. Faithful to the OG, the shoe's upper is built with leather, finished in grey and supported by a darker grey patent leather mudguard. Tonal webbing eyelets are worked into the lacing system to secure the fit, while underfoot, a contrasting white phylon midsole houses full-length Air for cushioning, with a carbon fiber plate included for added support. An icy translucent rubber outsole provides traction.",
+            "price" :215,
+            "availableSizes":["12","11", "8.5", "9", "10", "10.5"]
         },
 
         {
-            "_id":"dress4",
-            "title": "Dress 4",
-            "image":"/images/dress4.jpg",
-            "description": "beautiful dress",
-            "price" :29,
-            "availableSizes":[ "M", "S", "XS"]
+            "_id":"shoe4",
+            "title": "AIR JORDAN 4 RETRO 'RED THUNDER'",
+            "image":"/images/shoe4.jpg",
+            "description": "Recalling the 'Thunder' colorway, the Air Jordan 4 Retro 'Red Thunder', also known as 'Crimson', emerges with similar color-blocking, albeit in a different mix of hues. The shoe's upper is built with a black nubuck base, highlighted by red throughout, including on the molded eyelets and quarter panel. More red marks the midsole, which includes visible Air for cushioning, while a two-tone rubber outsole is included for traction.",
+            "price" :290,
+            "availableSizes":["12","11", "8.5", "9", "10", "10.5"]
+        },
+
+        {
+            "_id":"shoe5",
+            "title": "AIR JORDAN 1 RETRO HIGH OG 'DARK MOCHA'",
+            "image":"/images/shoe5.jpg",
+            "description": "Featuring a look similar to Travis Scott's 2019 Air Jordan 1 collaboration, the Air Jordan 1 Retro High OG 'Dark Mocha' released in October 2020. The shoe's upper is built with leather, sporting a white base overlaid by black leather. The heel and collar incorporate Dark Mocha nubuck, while a nylon tongue and perforations on the toe box maintain the classic aesthetic. Air in the heel of the midsole provides cushioning.",
+            "price" :215,
+            "availableSizes":["12","11", "8.5", "9", "10", "10.5"]
+        },
+
+        {
+            "_id":"shoe6",
+            "title": "YEEZY BOOST 350 V2 'BLUE TINY'",
+            "image":"/images/shoe6.jpg",
+            "description": "The Yeezy Boost 350 V2 'Blue Tint' features a white and grey upper with a red ‘SPLY-350’ txt on the side. It also arrives with blue laces, inner lining, and heel tab. This Yeezy dropped in December 2017 shortly after the Yeezy Boost 350 V2 Beluga 2.0.'",
+            "availableSizes":["12","11", "8.5", "9", "10", "10.5"]
         }
 
 

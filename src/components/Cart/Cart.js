@@ -6,6 +6,18 @@ import { removeFromCart } from "../../actions/cartActions";
 import { createOrder, clearOrder } from "../../actions/orderActions";
 import Modal from "react-modal";
 
+const customStyles = {
+  content: {
+    background: "black",
+    color: "red",
+    width: "50%",
+    height: "70%",
+    left: "20%",
+    top: "10%",
+    padding: "5%",
+  },
+};
+
 const Cart = ({ removeFromCart, cartItems }) => {
   const [showCheckOut, setShowCheckOut] = useState(false);
   const [order, setOrder] = useState(null);
@@ -60,7 +72,7 @@ const Cart = ({ removeFromCart, cartItems }) => {
       )}
 
       {order && (
-        <Modal isOpen={true} onRequestClose={closeModal}>
+        <Modal isOpen={true} onRequestClose={closeModal} style={customStyles}>
           <Zoom>
             <button className="close-modal" onClick={closeModal}>
               x{" "}
@@ -70,34 +82,28 @@ const Cart = ({ removeFromCart, cartItems }) => {
               <h2>Order{order._id}</h2>
               <ul className="order-class">
                 <li>
-                  <div>Name:</div>
-                  <div>{order.name}</div>
+                  <div>Name:{order.name}</div>
                 </li>
                 <li>
-                  <div>Email:</div>
-                  <div>{order.email}</div>
+                  <div>Email:{order.email}</div>
                 </li>
                 <li>
-                  <div>Address:</div>
-                  <div>{order.address}</div>
+                  <div>Address:{order.address}</div>
                 </li>
                 <li>
-                  <div>Total:</div>
-                  <div>${order.total}</div>
+                  <div>Total:${order.total}</div>
                 </li>
                 <li>
-                  <div>Cart Items:</div>
-                  <div>
-                    {order.cartItems.map((x) => (
-                      <div>
-                        {x.count} x {x.title}
-                      </div>
-                    ))}
-                  </div>
+                  Cart Items:
+                  {order.cartItems.map((x) => (
+                    <>
+                      {x.count} x {x.title}
+                    </>
+                  ))}
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="thank-you">
               <h1> Thank you shopping with KICKSKART</h1>
             </div>
           </Zoom>

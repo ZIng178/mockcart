@@ -1,5 +1,5 @@
 //feature 1
-
+import React, { useState } from "react";
 import Cart from "./components/Cart/Cart";
 import Filter from "./components/Filter/Filter";
 import Products from "./components/Products/Products";
@@ -7,7 +7,11 @@ import Products from "./components/Products/Products";
 import store from "./store";
 import { Provider } from "react-redux";
 
+import data from "./data.json";
+
 function App() {
+  const [size, setSize] = useState("");
+  const [products, setProducts] = useState(data.products);
   return (
     <>
       <Provider store={store}>
