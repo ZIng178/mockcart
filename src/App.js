@@ -10,8 +10,6 @@ import { Provider } from "react-redux";
 import data from "./data.json";
 
 function App() {
-  const [size, setSize] = useState("");
-  const [products, setProducts] = useState(data.products);
   return (
     <>
       <Provider store={store}>

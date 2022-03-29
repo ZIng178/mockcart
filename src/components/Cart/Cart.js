@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./cart.css";
 import { Fade, Zoom } from "react-awesome-reveal";
 import { connect } from "react-redux";

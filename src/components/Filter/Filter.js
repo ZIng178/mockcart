@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import React, { useState } from "react";
+import React from "react";
 import "./filter.css";
 import { filterProducts, sortProducts } from "../../actions/productActions";
 import data from "../../data.json";
